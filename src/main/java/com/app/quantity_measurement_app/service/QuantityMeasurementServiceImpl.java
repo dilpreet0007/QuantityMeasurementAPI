@@ -28,7 +28,7 @@ public class QuantityMeasurementServiceImpl implements IQuantityMeasurementServi
         IMeasurableUnit unit2 = resolveUnit(thatQuantity);
 
         boolean isEqual = compareValues(unit1, thisQuantity.getValue(), unit2, thatQuantity.getValue());
-        String resultStr = isEqual ? "Equal(success)" : "Not Equal(Not Successfull)";
+        String resultStr = isEqual ? "Equal" : "Not Equal";
 
         QuantityMeasurementEntity entity =
                 new QuantityMeasurementEntity(thisQuantity, thatQuantity,
